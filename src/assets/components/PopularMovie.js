@@ -17,8 +17,8 @@ export const PopularMovie = () => {
   },[])
 
   return (
-    <div className="h-full">
-      <div className="flex justify-between bg-black  px-[10rem] py-[2rem]">
+    <div className="h-full bg-black">
+      <div className="flex justify-between bg-black px-[10rem] py-[2rem]">
         <h1 className="text-2xl text-white font-medium ">Popular Movie</h1>
         <div className="flex content-center items-center gap-3 ">
           <a href="/allmovie" className="text-lg text-red-500 font-medium">
@@ -33,9 +33,9 @@ export const PopularMovie = () => {
           </svg>
         </div>
       </div>
-      <Swiper className="w-[100%]"
+      <Swiper className="w-[90%]"
         spaceBetween={50}
-        slidesPerView={3}
+        slidesPerView={5}
         > 
         {movies.movies.data?.map((movie) => (
           <SwiperSlide  key={movie.id} >

@@ -2,8 +2,11 @@ import { useQuery } from "@tanstack/react-query";
 import http3 from "../../utils/http3";
 import { API_ENDPOINT } from "../../utils/api-endpoints";
 
-const fetchUserData = async ({ queryKey }) => {
+export const reduxGetUser = async () => {
+  return await http3.get(API_ENDPOINT.GET_USER );
+};
 
+const fetchUserData = async ({ queryKey }) => {
   const [_key] = queryKey;
   const { data } = await http3.get(_key).
   then((value) => {
@@ -13,7 +16,6 @@ const fetchUserData = async ({ queryKey }) => {
       Chaa : value.data.data.name , 
       email : value.data.data.email
     }
-
     return { data : Datahasil }
 
   }).catch((err) => {
@@ -22,11 +24,8 @@ const fetchUserData = async ({ queryKey }) => {
       window.location.href = "/";
     }
   })
-
-
   return data
 }
-
 
 // untuk Dinamis Handle√
 const useGetDataUser = (options) => {
@@ -34,5 +33,5 @@ const useGetDataUser = (options) => {
 
 };
 
-
 export { fetchUserData, useGetDataUser }
+

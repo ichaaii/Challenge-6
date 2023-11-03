@@ -4,9 +4,13 @@ import { toast } from "react-toastify";
 import { useGoogleLogin } from "@react-oauth/google";
 import { CookieKeys, CookieStorage } from "../../utils/cookie";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setToken } from "../../redux/reducers/auth/authLogin";
 
 function GoogleLogin({ buttonText }) {
   const navigate = useNavigate();
+  const dispatch = useDispatch()
+
   const registerLoginWithGoogleAction = async (accessToken) => {
     try {
       let data = JSON.stringify({
@@ -27,6 +31,8 @@ function GoogleLogin({ buttonText }) {
       const { token } = response.data.data;
 
       CookieStorage.set(CookieKeys.AuthToken, token);
+
+      dispatch(setToken(token))
 
       toast.success(
         "Berhasil login dengan Google!",

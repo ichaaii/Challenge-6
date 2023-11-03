@@ -8,19 +8,19 @@ export const reduxLoginUser = async (input) => {
     return await http3.post(API_ENDPOINT.LOGIN_USER, input );
   };
 
-  //use mutation function
-  const LoginUser = async (input) =>{
-    return await http3.post(API_ENDPOINT.LOGIN_USER, input).then((result) => {
-        CookieStorage.set(CookieKeys.AuthToken, result.data.data.token)
-        return result
-    }).catch((err) => {
-  });;
-}
+//   //use mutation function
+//   const LoginUser = async (input) =>{
+//     return await http3.post(API_ENDPOINT.LOGIN_USER, input).then((result) => {
+//         CookieStorage.set(CookieKeys.AuthToken, result.data.data.token)
+//         return result
+//     }).catch((err) => {
+//   });;
+// }
 
-const useLoginUser = () => {
-    return useMutation(LoginUser)
-};
+// const useLoginUser = () => {
+//     return useMutation(LoginUser)
+// };
 
-export {LoginUser, useLoginUser }
+// export {LoginUser, useLoginUser }
 
   

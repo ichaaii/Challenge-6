@@ -13,6 +13,7 @@ const useMovieDataQuery = (options) => {
 };
 export { fetchDataMovie, useMovieDataQuery };
 
+//redux
 export const reduxDataMovie = async () => {
   return await http3.get(API_ENDPOINT.BINAR_POPULAR)
 }
