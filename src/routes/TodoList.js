@@ -7,12 +7,14 @@ import { DetailMovie } from '../pages/DetailMovie'
 import { Register } from '../pages/auth/Register'
 import { LoginPage } from '../pages/auth/LoginPage'
 import { Dashboard } from '../pages/halamanRouter/Dashboard'
+import {Responsive} from '../pages/Responsive'
 import TokenProtected from '../assets/components/protected/TokenProtected'
 
 export const TodoList = () => {
   return (
     <BrowserRouter>
     <Routes>
+    <Route path='/Responsive' element={<Responsive/>}/>
     <Route path='/' element={<LoginPage/>}/>
     <Route path='/home' element={
       <TokenProtected>

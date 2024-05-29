@@ -50,14 +50,11 @@ export const LoginPage = () => {
 
   return (
     <div className="w-screen h-screen relative bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-black via-black to-red-700">
-      
-      <div className="w-screen h-screen  flex justify-center items-center bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-black via-black to-red-700">
+      <div className="w-screen h-screen flex justify-center items-center bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-black via-black to-red-700">
       <div className="flex justify-items-center w-1/2 rounded-3xl backdrop-blur-xl bg-black/40 ">
         <div  className=" px-[4rem] py-[5rem] rounded-l-3xl bg-red-700 "   >
           <div className=" flex flex-col justify-center content-center ">
           <p className="text-white font-semibold text-2xl text-center mb-2 ">New here?</p>
-          
-
           <p className="text-white font-normal text-center text-base  "> "Register for free to enjoy the latest movie releases, access a vast library of classic films, and connect with fellow movie enthusiasts in our vibrant community."</p>
           <a href="/Register" className="text-white mt-4 mx-10 border-2 border-white rounded-lg text-center    ">
             Sign up

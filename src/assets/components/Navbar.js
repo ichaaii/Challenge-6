@@ -52,7 +52,7 @@ export const Navbar = () => {
 
   return (
     <div className="relative items-center bg-transparent z-10 ">
-      <div className="fixed flex justify-around items-center w-full mt-6 bg-transparent z-5">
+      <div className="fixed flex justify-around items-center w-full mt-6 bg-black-500 z-5">
         <button
           onClick={handleBrand}
           className="font-bold text-4xl text-red-600"
@@ -86,15 +86,15 @@ export const Navbar = () => {
             </svg>
           </button>
         </form>
-        <div className="space-x-5">
+        <div className="flex items-center space-x-5">
           <button
             onClick={handleLogout}
             className="px-[2.5rem] py-[0.5rem] rounded-xl bg-red-600 text-white font-semibold"
           >
             Logout
           </button>
-        </div>
-        <div className="flex flex-row "onClick={handleUserClick}>
+        
+        <div className="flex items-center"onClick={handleUserClick}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -110,6 +110,7 @@ export const Navbar = () => {
           />
         </svg>
         <h1 className="text-white pl-3 font-semibold">{dataUserMovie.name} </h1>
+        </div>
         </div>
         <ModalComponent isOpen={isModalOpen} onClose={() => setModalOpen(false)} userData={dataUserMovie} />
       </div>

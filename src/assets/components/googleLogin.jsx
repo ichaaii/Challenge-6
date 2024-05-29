@@ -42,7 +42,6 @@ function GoogleLogin({ buttonText }) {
         navigate("/home")
       );
 
-      // window.location.href = "/home";
     } catch (error) {
       if (axios.isAxiosError(error)) {
         toast.error(error.response.data.message, {

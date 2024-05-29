@@ -22,7 +22,7 @@ export const DetailMovie = () => {
   const rate = detailsMovie && detailsMovie.vote_average.toFixed(1);
 
   return (
-    <div className="">
+    <div className="relative h-full">
       <Navbar />
       <img
         className="w-full h-[50rem] brightness-50 "
