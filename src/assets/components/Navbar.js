@@ -51,8 +51,8 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <div className="relative items-center bg-transparent z-10 ">
-      <div className="fixed flex justify-around items-center w-full mt-6 bg-black-500 z-5">
+    <div className="relative items-center z-10">
+      <div className="fixed flex justify-around items-center w-full py-6 z-5">
         <button
           onClick={handleBrand}
           className="font-bold text-4xl text-red-600"
@@ -114,6 +114,6 @@ export const Navbar = () => {
         </div>
         <ModalComponent isOpen={isModalOpen} onClose={() => setModalOpen(false)} userData={dataUserMovie} />
       </div>
-    </div>
+      </div>
   );
 };

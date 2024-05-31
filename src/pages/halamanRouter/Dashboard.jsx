@@ -6,7 +6,6 @@ export const Dashboard = () => {
     const { data: paijoSalto  , isError , status } = useGetDataUser({})
 
     useEffect(() => {
-      console.log(paijoSalto)
     }, [paijoSalto , status])
 
 

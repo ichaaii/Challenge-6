@@ -17,8 +17,8 @@ export const PopularMovie = () => {
   },[])
 
   return (
-    <div className="h-full bg-black">
-      <div className="flex justify-between bg-black px-[10rem] py-[2rem]">
+    <div className="h-full bg-black pb-7">
+      <div className="flex justify-between bg-black px-20 py-[2rem]">
         <h1 className="text-2xl text-white font-medium ">Popular Movie</h1>
         <div className="flex content-center items-center gap-3 ">
           <a href="/allmovie" className="text-lg text-red-500 font-medium">
@@ -40,7 +40,7 @@ export const PopularMovie = () => {
         {movies.movies.data?.map((movie) => (
           <SwiperSlide  key={movie.id} >
             <Link to={`/detail/${movie.id}`}>
-              <img className=" transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 "
+              <img className="transition ease-in-out delay-150 bg-red-500 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 "
                 src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
                 alt={movie.title}
               />
